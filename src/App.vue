@@ -165,6 +165,16 @@ export default {
         }
         this.maxWeightInKgs = Math.max(...this.weightsArray);
         this.minWeightInKgs = Math.min(...this.weightsArray);
+      }else{
+        this.dataObject = {"0":{
+          "weightInKgs": 0,
+          "year": 0,
+          "monthIndex": 0,
+          "dayOfTheMonthIndex": 1,
+          "dayOfTheWeekIndex": 1,
+          "hours": 12,
+          "minutes": 0}}
+          window.localStorage.setItem("dataObject",JSON.stringify(this.dataObject))
       }
   },
 }
